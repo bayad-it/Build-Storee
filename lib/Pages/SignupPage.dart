@@ -1,3 +1,4 @@
+import 'package:build_store/Pages/loginPage.dart';
 import 'package:build_store/Utilities/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -139,8 +140,8 @@ class SignupPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Padding(
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 80, vertical: 20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -159,9 +160,19 @@ class SignupPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 15,)
-                  , Text('هەژماری خۆت هەیە؟',style: TextStyle(color: color5,fontSize: 17),)
-          
+                  const SizedBox(
+                    height: 3,
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      // Navigate to SecondPage when the button is pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    },
+                    child: Text('هەژماری خۆت هەیە ؟'),
+                  ),
                 ],
               ),
             ],
